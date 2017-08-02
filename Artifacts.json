@@ -5,7 +5,7 @@
   "iconUri": "",
   "targetOsType": "Linux",
   "parameters": {
-    "sourdedir1": {
+    "sourcedir1": {
       "type": "string",
       "displayName": "sourcedir1",
       "description": "sourcedir1"
