@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "fio-installation",
+  "description": "fio package installation",
+  "iconUri": "",
+  "targetOsType": "Linux",
+  "parameters": {
+    "sourdedir1": {
+      "type": "string",
+      "displayName": "sourcedir1",
+      "description": "sourcedir1"
+    }
+  },
+  "runCommand": {
+    "commandToExecute": "[concat('apt-get -y install fio && mkdir -p /opt/sources/", parameters('sourcedir1')]"
+  }
+}
