@@ -37,6 +37,6 @@
         }
     },
   "runCommand": {
-    "commandToExecute": "[concat('apt-get -y install fio ' , parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
+    "commandToExecute": "[concat('apt-get update && apt-get -y install fio ' , parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
   }
 }
