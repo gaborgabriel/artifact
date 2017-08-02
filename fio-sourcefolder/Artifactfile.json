@@ -16,7 +16,7 @@
             "type": "string",
             "displayName": "Packages",
             "allowEmpty": false,
-            "description": "The packages to install on the VM."
+            "description": "The packages to install too on the VM."
         },
         "update": {
             "type": "string",
@@ -37,6 +37,6 @@
         }
     },
   "runCommand": {
-    "commandToExecute": "[concat('apt-get -y install fio && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
+    "commandToExecute": "[concat('apt-get -y install fio ' , parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
   }
 }
