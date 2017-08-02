@@ -17,26 +17,9 @@
             "displayName": "Packages",
             "allowEmpty": false,
             "description": "The packages to install too on the VM."
-        },
-        "update": {
-            "type": "string",
-            "displayName": "Run Update First",
-            "defaultValue": "true",
-            "allowEmpty": false,
-            "allowedValues": [
-                "true",
-                "false"
-            ],
-            "description": "Run apt-get update prior to running the full install command. Allowed values are 'true' and 'false'. Note that no additional options are passed to the 'apt-get update' command other than --quiet --assume-yes. It is recommended for you to set this to true and run update."
-        },
-        "options": {
-            "type": "string",
-            "displayName": "Additional Options",
-            "allowEmpty": true,
-            "description": "Any additional options to pass to the apt-get command line. These options will precede the install command when executed. Please see http://manpages.debian.org/cgi-bin/man.cgi?query=apt-get for an in-depth look at the options available. Note that --assume-yes and --quiet are always passed automatically."
         }
     },
   "runCommand": {
-    "commandToExecute": "[concat('apt-get update && apt-get -y install fio ' , parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
+    "commandToExecute": "[concat('apt-get update && apt-get -y install fio ', parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
   }
 }
