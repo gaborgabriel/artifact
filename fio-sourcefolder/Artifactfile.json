@@ -18,6 +18,12 @@
             "allowEmpty": false,
             "description": "The packages to install too on the VM."
         }
+        "sourcedir1": {
+            "type": "string",
+            "displayName": "Sources directory",
+            "allowEmpty": false,
+            "description": "The directory to create on the VM."
+        }        
     },
   "runCommand": {
     "commandToExecute": "[concat('apt-get update && apt-get -y install fio ', parameters('packages'), ' && mkdir -p /opt/sources/', parameters('sourcedir1'))]"
